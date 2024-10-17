@@ -86,3 +86,27 @@ public class Main {
         System.out.println("Para : " + (endPara - startPara));
     }
 }
+
+Example-004
+Optional eğer uygun elemanı bulamazsa ve get fonksiyonu çağrılırsa bu durumda
+NoSuchElement isimli bir exception throw edilir. Optionalın bir alternatifi 
+.orElse methodudur.
+import java.util.*;
+import java.util.stream.Stream;
+
+public class Main {
+    public static void main(String[] args)  {
+
+        List<String> names = Arrays.asList("John", "Laxmi", "Navin", "Jill");
+
+        Optional<String> name = names.stream()
+                .filter(str -> str.contains("x"))
+                .findFirst();
+        /* String name = names.stream()
+                .filter(str -> str.contains("x"))
+                .findFirst()
+                .orElse("NotFound");
+        */
+        System.out.println(name.get());
+    }
+}
