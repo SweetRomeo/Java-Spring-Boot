@@ -1,0 +1,52 @@
+Example
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args)  {
+        Comparator<Student> com = new Comparator<Student>() {
+            @Override
+            public int compare(Student s1, Student s2) {
+                if (s1.age > s2.age) {
+                    return 1;
+                }
+                return -1;
+            }
+        };
+        List<Student> students = new ArrayList<>();
+        students.add(new Student(21, "John"));
+        students.add(new Student(22, "Jane"));
+        students.add(new Student(23, "Jack"));
+        students.add(new Student(24, "Jill"));
+
+        Collections.sort(students);
+        for (Student s : students) {
+            System.out.println(s);
+        }
+    }
+}
+
+class Student implements Comparable<Student>
+{
+    String name;
+    int age;
+
+    public Student(int age, String name) {
+        this.age = age;
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+    public int compareTo(Student that) {
+        if (this.age > that.age) {
+            return 1;
+        }
+        return -1;
+    }
+}
