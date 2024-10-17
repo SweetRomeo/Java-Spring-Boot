@@ -110,3 +110,65 @@ public class Main {
         System.out.println(name.get());
     }
 }
+
+Example-005
+import java.util.*;
+import java.util.stream.Stream;
+
+class Student {
+    String name;
+    int age;
+    public Student() {}
+
+
+    public Student(String name) {
+        this.name = name;
+    }
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+}
+
+public class Main {
+    public static void main(String[] args)  {
+
+        List<String> names = Arrays.asList("John", "Laxmi", "Navin", "Jill");
+
+        List<Student> students = new ArrayList<>();
+        /*
+        for (String name : names) {
+            students.add(new Student(name));
+        }*/
+
+        students = names.stream()
+                        .map(Student::new)
+                                .toList();
+
+        System.out.println(students);
+    }
+}
