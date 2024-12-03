@@ -4,3 +4,4 @@ String sınıfı:
 atamak ile bunun arasında herhangi bir fark yoktur.
 - String sınıfı immutable bir sınıftır.
 - String C++ ta olduğu gibi == operatörü ile karşılaştırılamaz. Çünkü bu yazı içeriklerini değil bellek adreslerini karşılaştırır.
+- 
