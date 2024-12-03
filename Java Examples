@@ -1,0 +1,5 @@
+String sınıfı:
+- String bir temel tür(Primitive type) değildir. 
+- String türünden bir nesneye new operatörü kullanılarak atama yapılabilir. Ancak doğrudan yazı karakteri
+atamak ile bunun arasında herhangi bir fark yoktur.
+- String sınıfı immutable bir sınıftır.
