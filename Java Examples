@@ -9,3 +9,4 @@ String Builder ve String Buffer sınıfları:
 - Bu sınıfların yazı kapasitesini veren capacity fonksiyonu mevcuttur.
 - Bu sınıfların String sınıfında olmayan append metotları da mevcuttur.
 - Bu sınfların karakterlerin tamamını silen delete metodları da mevcuttur.
+- String Buffer Thread safe iken String Builder Thread safe değildir.
