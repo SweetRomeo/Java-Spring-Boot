@@ -4,4 +4,8 @@ String sınıfı:
 atamak ile bunun arasında herhangi bir fark yoktur.
 - String sınıfı immutable bir sınıftır.
 - String C++ ta olduğu gibi == operatörü ile karşılaştırılamaz. Çünkü bu yazı içeriklerini değil bellek adreslerini karşılaştırır.
-- 
+String Builder ve String Buffer sınıfları:
+- Bu sınıfları String sınıfının aksine Mutable(değiştirilebilir) özellik gösterirler.
+- Bu sınıfların yazı kapasitesini veren capacity fonksiyonu mevcuttur.
+- Bu sınıfların String sınıfında olmayan append metotları da mevcuttur.
+- Bu sınfların karakterlerin tamamını silen delete metodları da mevcuttur.
