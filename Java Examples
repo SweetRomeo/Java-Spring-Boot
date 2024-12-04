@@ -15,3 +15,6 @@ Static Block
 - non-static veri elemanlarının tanımlanması durumunda error oluşur.
 - static block nesne yaratımı olduğu takdirde ctordan bile önce çağrılır.
 - 100 tane nesne yaratıldığında ctor 100 defa çağrılır ancak static block sadece bir kere çağrılır.
+Wrapper Class
+- Sarmayalan sınıflar temel türlerden gelen değerleri sarmalarlar. Bu işlemler temel türlerin tek başına 
+yapamadığı içleri sarmalayan sınıf yardımıyla yapabilmesi içindir.
