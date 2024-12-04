@@ -18,3 +18,6 @@ Static Block
 Wrapper Class
 - Sarmayalan sınıflar temel türlerden gelen değerleri sarmalarlar. Bu işlemler temel türlerin tek başına 
 yapamadığı içleri sarmalayan sınıf yardımıyla yapabilmesi içindir.
+Abstract Anahtar Sözcüğü
+- Abstract metotların gövdeleri yoktur.
+- Tasarımda abstract metotlara sahip olan sınıflar her zaman bir türemiş sınıfı(Derived-Sub-Child class) mevcut olmalıdır. Ayrıca bu türemiş 
