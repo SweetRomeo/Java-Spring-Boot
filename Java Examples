@@ -10,3 +10,6 @@ String Builder ve String Buffer sınıfları:
 - Bu sınıfların String sınıfında olmayan append metotları da mevcuttur.
 - Bu sınfların karakterlerin tamamını silen delete metodları da mevcuttur.
 - String Buffer Thread safe iken String Builder Thread safe değildir.
+Static Block
+- bu block içerisinde yalnızca sınıfın static veri elemanları tanımlanabilir. 
+- non-static veri elemanlarının tanımlanması durumunda error oluşur.
