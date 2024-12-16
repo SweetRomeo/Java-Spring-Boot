@@ -5,7 +5,7 @@ public class App {
     public static void main(String[] args) {
         String url = "jdbc:postgresql://localhost:5433/demo";
         String user = "postgres";
-        String password = "fgJKlmay6n9=)";
+        String password = "0000";
         String sql = "select * from student";
 
         try {
