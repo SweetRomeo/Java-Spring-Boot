@@ -24,6 +24,7 @@ public class App {
             student.connectDatabase(url, user, password);
             student.executeQuery(sql);
             student.printStudentInfo();
+            student.addStudent();
             student.closeConnection();
         }
         catch (Exception ex) {
