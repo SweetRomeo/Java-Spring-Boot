@@ -105,11 +105,15 @@ public class Student {
     }
 
     public void addStudent() throws SQLException {
-        String studentName = scanner.nextLine();
-        String studentGender = scanner.nextLine();
-        int studentAge = Integer.parseInt(scanner.nextLine());
+        System.out.println("Enter student id: ");
         int studentId = Integer.parseInt(scanner.nextLine());
-        String addStudentSql = "insert into student values (" + studentId + ",\'" + studentName + "\',\' " + studentGender + "\', " + studentAge + ")";
+        System.out.println("Enter student age: ");
+        int studentAge = Integer.parseInt(scanner.nextLine());
+        System.out.println("Enter student name: ");
+        String studentName = scanner.nextLine();
+        System.out.println("Enter student gender: ");
+        String studentGender = scanner.nextLine();
+        String addStudentSql = "insert into student values (" + studentId + "," + studentAge + ",\' " + studentName + "\',\' " + studentGender + "\')";
         statement = connection.createStatement();
         statement.execute(addStudentSql);
     }
