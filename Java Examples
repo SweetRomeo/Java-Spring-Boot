@@ -4,6 +4,17 @@ Sıralama Algoritmaları
 - Merge Sort
 - Bubble Sort
 
+Singleton Sınıfının genel yapısı:
+- Bu sınıfta default constructor private olmalıdır. Bunun amacı her seferinde 
+nesne üretilmemesi eğer nesnenin içi dolu ise ctor çağrılmamasını sağlar.
+- Burada ctoru çağıran metot bir static metot olup genellikle ismi getInstance olur. Bu 
+metot nesnenin yaratılıp yaratılmadığını kontrol ederek nesne yaratılmamış ise ctor çağrısını 
+yapar. 
+- Bu sınıfın en önemli özelliği statix metot çağrısı üzerinden nesne yaratılması ve hali hazırda bir nesne 
+varsa yeni bir nesne oluşturulmaması bununla birlikte yapılacak olan bellek tasarufu.
+
+
+
 
 String sınıfı:
 - String bir temel tür(Primitive type) değildir. 
