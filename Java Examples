@@ -180,15 +180,20 @@ Nesnenin yaratıldığı sınıfın static metodu synchronized anahtar sözcüğ
 yazılır. Bu sayede sadece maksimum bir tane thread içerisinde bu metot çağrılabilir. Bu
 da bu sınıf nesnesiyle thread safe bir şekilde çalışılmasına imkan verir.
 Örnek:
-public static ThreadSafeSingleton getInstanceUsingDoubleLocking() {
-    if (instance == null) {
-        synchronized (ThreadSafeSingleton.class) {
-            if (instance == null) {
-                instance = new ThreadSafeSingleton();
-            }
+package com.journaldev.singleton;
+
+public class ThreadSafeSingleton {
+
+    private static ThreadSafeSingleton instance;
+
+    private ThreadSafeSingleton(){}
+
+    public static synchronized ThreadSafeSingleton getInstance() {
+        if (instance == null) {
+            instance = new ThreadSafeSingleton();
         }
+        return instance;
     }
-    return instance;
 }
 //--------------------------------------------------------------------------
 
