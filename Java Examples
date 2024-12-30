@@ -229,3 +229,8 @@ Inner Class
 - 
 Anonymous Class
 - 
+interfaces
+- interfaceler içerisinde access modifier bulunmaz. 
+- interfacelerdeki bütün veri elemanları default olarak abstract ve publictir.
+- interfaceler içerisinde metotlar sadece bildirilir ancak tanımlanmaz.
+- interfaceler sınıflara bağlanırken implements anahtar sözcüğü kullanılır.
