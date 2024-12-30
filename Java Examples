@@ -113,6 +113,9 @@ class App {
         configManager.printSettings();
     }
 }
+Singleton sınıfının formları:
+1-) Early instantiation: Yükleme zamanında nesne yaratılır.
+2-) Lazy instantiation: Bir gerekliliğe bağlı olarak nesne yaratılır.
 //--------------------------------------------------------------------------
 
 
