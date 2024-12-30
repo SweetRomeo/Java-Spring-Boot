@@ -222,4 +222,5 @@ Abstract Anahtar Sözcüğü
 - Abstract metotların gövdeleri yoktur. Bu sebeple türemiş sınıflarından herhangi birinde mutlaka tanımlanmaları gerekmektedir.
 - Abstract metotlar yalnızca abstract sınıfların içerisinde yer alabilirler.
 - Abstract sınıflardan new operatörüyle nesne yaratımı geçersizdir.
+- Abstract sınıflar içerisinde hem abstract hem abstract olmayan metotlar yer alabilir.
 - Tasarımda abstract metotlara sahip olan sınıflar her zaman bir türemiş sınıfı(Derived-Sub-Child class) mevcut olmalıdır. Ayrıca bu türemiş sınıf 
