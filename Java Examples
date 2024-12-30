@@ -219,5 +219,6 @@ Wrapper Class
 - Sarmayalan sınıflar temel türlerden gelen değerleri sarmalarlar. Bu işlemler temel türlerin tek başına 
 yapamadığı içleri sarmalayan sınıf yardımıyla yapabilmesi içindir.
 Abstract Anahtar Sözcüğü
-- Abstract metotların gövdeleri yoktur.
-- Tasarımda abstract metotlara sahip olan sınıflar her zaman bir türemiş sınıfı(Derived-Sub-Child class) mevcut olmalıdır. Ayrıca bu türemiş sınıf
+- Abstract metotların gövdeleri yoktur. Bu sebeple türemiş sınıflarından herhangi birinde mutlaka tanımlanmaları gerekmektedir.
+- Abstract metotlar yalnızca abstract sınıfların içerisinde yer alabilirler.
+- Tasarımda abstract metotlara sahip olan sınıflar her zaman bir türemiş sınıfı(Derived-Sub-Child class) mevcut olmalıdır. Ayrıca bu türemiş sınıf 
