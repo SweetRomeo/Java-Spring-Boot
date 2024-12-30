@@ -113,9 +113,73 @@ class App {
         configManager.printSettings();
     }
 }
-Singleton sınıfının formları:
-1-) Early instantiation: Yükleme zamanında nesne yaratılır.
-2-) Lazy instantiation: Bir gerekliliğe bağlı olarak nesne yaratılır.
+Singleton sınıfının implementasyon formları:
+1-) Eager initialization: nesne yaratımı static veri elemanının tanımı sırasında yapılır. Bu nesnenin 
+final olması siddetle tavsiye edilir. Kısaca ctor bir metot içerisinde değil doğrudan static veri elemanı tanımı sırasında çağrılır.
+Örnek:
+package com.journaldev.singleton;
+
+public class EagerInitializedSingleton {
+
+    private static final EagerInitializedSingleton instance = new EagerInitializedSingleton();
+
+    // private constructor to avoid client applications using the constructor
+    private EagerInitializedSingleton(){}
+
+    public static EagerInitializedSingleton getInstance() {
+        return instance;
+    }
+}
+
+2-) Static block initialization: Nesne yaratımı(ctor çağrısı) static metot veya veri elemanı içerisinde değil doğrudan static blok içerisinde yapılıyorsa 
+Buna static block init. adı verilir. 
+Örnek:
+package com.journaldev.singleton;
+
+public class StaticBlockSingleton {
+
+    private static StaticBlockSingleton instance;
+
+    private StaticBlockSingleton(){}
+
+    // static block initialization for exception handling
+    static {
+        try {
+            instance = new StaticBlockSingleton();
+        } catch (Exception e) {
+            throw new RuntimeException("Exception occurred in creating singleton instance");
+        }
+    }
+
+    public static StaticBlockSingleton getInstance() {
+        return instance;
+    }
+}
+
+3-) Lazy initialization: Bu formda nesne static metot içerisinde yaratılır ve nesnenin boş olup 
+olmadığı kontrol edilir. Şüphesiz getInstance metodu çağrılmadığı sürece nesne yaratımı olmaz.
+Örnek:
+package com.journaldev.singleton;
+
+public class LazyInitializedSingleton {
+
+    private static LazyInitializedSingleton instance;
+
+    private LazyInitializedSingleton(){}
+
+    public static LazyInitializedSingleton getInstance() {
+        if (instance == null) {
+            instance = new LazyInitializedSingleton();
+        }
+        return instance;
+  }
+}  
+
+4-) Thread Safe Singleton
+Nesnenin yaratıldığı sınıfın static metodu synchronized anahtar sözcüğü ile birlikte 
+yazılır. Bu sayede sadece maksimum bir tane thread içerisinde bu metot çağrılabilir. Bu
+da bu sınıf nesnesiyle thread safe bir şekilde çalışılmasına imkan verir.
+
 //--------------------------------------------------------------------------
 
 
