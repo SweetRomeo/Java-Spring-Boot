@@ -179,7 +179,17 @@ public class LazyInitializedSingleton {
 Nesnenin yaratıldığı sınıfın static metodu synchronized anahtar sözcüğü ile birlikte 
 yazılır. Bu sayede sadece maksimum bir tane thread içerisinde bu metot çağrılabilir. Bu
 da bu sınıf nesnesiyle thread safe bir şekilde çalışılmasına imkan verir.
-
+Örnek:
+public static ThreadSafeSingleton getInstanceUsingDoubleLocking() {
+    if (instance == null) {
+        synchronized (ThreadSafeSingleton.class) {
+            if (instance == null) {
+                instance = new ThreadSafeSingleton();
+            }
+        }
+    }
+    return instance;
+}
 //--------------------------------------------------------------------------
 
 
