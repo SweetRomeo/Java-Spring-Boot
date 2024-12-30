@@ -12,8 +12,108 @@ metot nesnenin yaratılıp yaratılmadığını kontrol ederek nesne yaratılmam
 yapar. 
 - Bu sınıfın en önemli özelliği statix metot çağrısı üzerinden nesne yaratılması ve hali hazırda bir nesne 
 varsa yeni bir nesne oluşturulmaması bununla birlikte yapılacak olan bellek tasarufu.
+Bazı Singleton Sınıf Örnekleri:
+Örn 1:
+// Singleton Class
+public class Singleton {
+    // Sınıfın tek örneği
+    private static Singleton instance;
 
+    // Private constructor, böylece dışarıdan nesne oluşturulamaz
+    private Singleton() {
+        System.out.println("Singleton instance created!");
+    }
 
+    // Tek örneği döndüren yöntem
+    public static Singleton getInstance() {
+        if (instance == null) {
+            instance = new Singleton();
+        }
+        return instance;
+    }
+
+    // Örnek bir metod
+    public void showMessage() {
+        System.out.println("Singleton Instance Method Invoked!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Singleton sınıfını kullanma
+        Singleton singleton1 = Singleton.getInstance();
+        singleton1.showMessage();
+
+        Singleton singleton2 = Singleton.getInstance();
+        System.out.println(singleton1 == singleton2); // true
+    }
+}
+
+Örn 2:
+public class LogManager {
+    private static LogManager instance;
+    
+    private LogManager() {
+        System.out.println("LogManager instance created!");
+    }
+    
+    public static LogManager getInstance() {
+        if (instance == null) {
+            instance = new LogManager();
+        }
+        return instance;
+    }
+    
+    public void log(String message) {
+        System.out.println("Log: " + message);
+    }
+}
+
+public class Game {
+    public static void main(String[] args) {
+        LogManager logger = LogManager.getInstance();
+        logger.log("Player has started the game.");
+        logger.log("Player collected a treasure.");
+    }
+}
+Örn 3:
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class ConfigManager {
+    private final Map<String, String> configs = new HashMap<String, String>();
+    private static ConfigManager instance;
+    private ConfigManager() {
+        System.out.println("ConfigManager Constructor");
+    }
+    public static ConfigManager getInstance() {
+        return instance == null ? instance = new ConfigManager() : instance;
+    }
+
+    public String getSettings(String key) {
+        return configs.get(key);
+    }
+
+    public void setSettings(String key, String value) {
+        configs.put(key, value);
+    }
+
+    public void printSettings() {
+        for (Map.Entry<String, String> entry : configs.entrySet()) {
+            System.out.println(entry.getKey() + " = " + entry.getValue());
+        }
+    }
+}
+class App {
+    public static void main(String[] args) {
+        ConfigManager configManager = ConfigManager.getInstance();
+        configManager.setSettings("19937", "Burcu");
+        configManager.setSettings("19938", "Berke");
+        configManager.printSettings();
+    }
+}
+//--------------------------------------------------------------------------
 
 
 String sınıfı:
