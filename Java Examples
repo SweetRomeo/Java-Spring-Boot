@@ -224,3 +224,6 @@ Abstract Anahtar Sözcüğü
 - Abstract sınıflardan new operatörüyle nesne yaratımı geçersizdir.
 - Abstract sınıflar içerisinde hem abstract hem abstract olmayan metotlar yer alabilir.
 - Tasarımda abstract metotlara sahip olan sınıflar her zaman bir türemiş sınıfı(Derived-Sub-Child class) mevcut olmalıdır. Ayrıca bu türemiş sınıf 
+Inner Class
+- Inner classlarda nesne yaratığı doğrudan yapılamaz.
+- 
