@@ -204,6 +204,19 @@ String sınıfı:
 atamak ile bunun arasında herhangi bir fark yoktur.
 - String sınıfı immutable bir sınıftır.
 - String C++ ta olduğu gibi == operatörü ile karşılaştırılamaz. Çünkü bu yazı içeriklerini değil bellek adreslerini karşılaştırır.
+String sınıfının bazı önemli metotları:
+- trim metodu: Kendisine gönderilen yazının sonundaki ve başındaki boşluklarını silen metottur. Parametresiz bir metottur.
+- length metodu: Adından da anlaşılabileceği gibi yazının uzunluğunu döndüren metottur. Parametresiz bir metottur.
+- charAt metodu: Tek parametreli olup kendisine gönderilen numaralı karakteri geri döndürür.
+- concat metodu: concatenate den gelen bu metot adından da anlaşılabileceği gibi iki yazıyı birleştirmeye yarar. Tek parametreye sahiptir.
+- toLowerCase metodu: Parametresiz bu metot yazıdaki tüm harfleri büyük harf haline getirir.
+- toUpperCase metodu: Parametresiz bu metot yazıdaki tüm harfleri küçük harf haline getirir.
+- equals metodu:
+- equalsIgnoreCase metodu:
+- compareTo metodu:
+- startsWith metodu:
+- endsWith metodu:
+
 String Builder ve String Buffer sınıfları:
 - Bu sınıfları String sınıfının aksine Mutable(değiştirilebilir) özellik gösterirler.
 - Bu sınıfların yazı kapasitesini veren capacity fonksiyonu mevcuttur.
