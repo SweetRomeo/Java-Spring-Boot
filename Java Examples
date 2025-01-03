@@ -211,10 +211,10 @@ String sınıfının bazı önemli metotları:
 - concat metodu: concatenate den gelen bu metot adından da anlaşılabileceği gibi iki yazıyı birleştirmeye yarar. Tek parametreye sahiptir.
 - toLowerCase metodu: Parametresiz bu metot yazıdaki tüm harfleri büyük harf haline getirir.
 - toUpperCase metodu: Parametresiz bu metot yazıdaki tüm harfleri küçük harf haline getirir.
-- equals metodu: Stringlerde karşılaştırma == veya != operatörleriyle yapılmaz. Çünkğ burada yazılar değil yazıların bulunduğu adresler karşılaştırılır. Bu sebeple 
+- equals metodu: Stringlerde karşılaştırma == veya != operatörleriyle yapılmaz. Çünkü burada yazılar değil yazıların bulunduğu adresler karşılaştırılır. Bu sebeple 
 iki String nesnesi karşılaştırılırken mutlaka equals metodu kullanılmalıdır.
-- equalsIgnoreCase metodu:
-- compareTo metodu:
+- equalsIgnoreCase metodu: equals metodunun büyük küçük harf dikkat etmeyen versiyonudur.
+- compareTo metodu: İki yazıyı karşılaştıran metottur. Bu metot eğer iki yazı eşitse 0, ...
 - startsWith metodu:
 - endsWith metodu:
 
