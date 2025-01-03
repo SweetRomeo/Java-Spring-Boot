@@ -222,7 +222,8 @@ iki String nesnesi karşılaştırılırken mutlaka equals metodu kullanılmalı
 alırken, iki parametrede ilk parametredeki indeksten başlayıp ikinci parametredeki indekse kadarki karakterleri alır.
 - indexOf metodu: Tek parametre alan bu fonksiyon aranan karakter veya yazının ilk geçtiği yerin indisini döndürür. Eğer eleman yazının içerisinde 
 yok ise bu durumda -1 döndürür.
-
+- lastIndexOf metodu: Tek parametre alan bu fonksiyon aranan karakter veya yazının son geçtiği yerin indisini döndürür. Eğer eleman yazının içerisinde 
+yok ise bu durumda -1 döndürür.
 
 String Builder ve String Buffer sınıfları:
 - Bu sınıfları String sınıfının aksine Mutable(değiştirilebilir) özellik gösterirler.
