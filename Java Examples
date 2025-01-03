@@ -220,7 +220,9 @@ iki String nesnesi karşılaştırılırken mutlaka equals metodu kullanılmalı
 - contains metodu: Yazı bu fonksiyona gönderilen karakteri(leri) içeriyorsa true, içermiyorsa false dönen bir metottur.
 - substring metodu: İki adet overloada sahip olan bu metot tek parametre aldığında ilk parametredeki indeksten başlayarak kalan tüm karakterleri 
 alırken, iki parametrede ilk parametredeki indeksten başlayıp ikinci parametredeki indekse kadarki karakterleri alır.
-- 
+- indexOf metodu: Tek parametre alan bu fonksiyon aranan karakter veya yazının ilk geçtiği yerin indisini döndürür. Eğer eleman yazının içerisinde 
+yok ise bu durumda -1 döndürür.
+
 
 String Builder ve String Buffer sınıfları:
 - Bu sınıfları String sınıfının aksine Mutable(değiştirilebilir) özellik gösterirler.
