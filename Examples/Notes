@@ -1,2 +1,5 @@
 JdbcTemplate jdbc;
-spring.datasource.url=jdbc.
+spring.datasource.url=jdbc:postgresql://localhost:5432
+spring.datasource.username=<kullanıcı adı>
+spring.datasource.password=<şifre>
+spring.datasource.driver-class-name=org.postgresql.Driver
