@@ -4,6 +4,10 @@ Sıralama Algoritmaları
 - Merge Sort
 - Bubble Sort
 
+Javada erişim belirleyiciler:
+- Private sadece sınıf içerisinden erişilebilen elemanları tutar.
+- Protected veri elemanları bulunduğu sınıfın yanı sıra hangi pakette olursa olsun türemiş sınıf içerisinde 
+
 Singleton Sınıfının genel yapısı:
 - Bu sınıfta default constructor private olmalıdır. Bunun amacı her seferinde 
 nesne üretilmemesi eğer nesnenin içi dolu ise ctor çağrılmamasını sağlar.
