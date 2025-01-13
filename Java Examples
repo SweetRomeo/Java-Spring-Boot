@@ -6,7 +6,31 @@ Sıralama Algoritmaları
 
 Javada erişim belirleyiciler:
 - Private sadece sınıf içerisinden erişilebilen elemanları tutar.
-- Protected veri elemanları bulunduğu sınıfın yanı sıra hangi pakette olursa olsun türemiş sınıf içerisinde 
+- Protected veri elemanları bulunduğu sınıfın yanı sıra hangi pakette olursa olsun türemiş sınıfın veri elemanlarına erişilebilir. Ek olarak 
+aynı paket içerisindeki herhangi bir sınıftan da erişim gene geçerlidir. Yalnız türemiş sınıf veri elemanı olmayıp farklı paket içerisinde bulunan elemanlara erişim 
+geçersizdir.
+- Public veri elemanlarına herhangi bir yerden erişim geçerlidir.
+- Default(no-modifier) veri elemanları bulunduğu sınıf ve aynı paket içerisindeki hem türemiş sınıfın veri elemanlarına her aynı paket içerisindeki herhangi bir elemana erişim geçerlidir.
+Aşağıdaki tablo bu maddeleri kısaca açıklamaktadır.
+
+Erişim Belirleyici       Private            Protected            Public                No-Modifier
+
+Aynı sınıftan            Erişilebilir       Erişilebilir         Erişilebilir          Erişilebilir
+
+Aynı paket ve
+Türemiş sınıftan         Erişilemez         Erişilebilir         Erişilebilir          Erişilebilir
+
+Aynı paket ve Türemiş
+olmayan sınıftan         Erişilemez         Erişilebilir         Erişilebilir          Erişilebilir
+
+Farklı paket ve
+Türemiş sınıftan         Erişilemez         Erişilebilir         Erişilebilir          Erişilemez
+
+Farkli paket ve
+Türemiş olmayan sınıf    Erişilemez         Erişilemez           Erişilebilir          Erişilemez
+
+
+
 
 Singleton Sınıfının genel yapısı:
 - Bu sınıfta default constructor private olmalıdır. Bunun amacı her seferinde 
