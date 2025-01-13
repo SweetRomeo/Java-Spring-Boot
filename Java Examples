@@ -301,6 +301,7 @@ olduğu metotları şüphesiz ki kullanabilir.
 
 Annotation
 - @Override bildirimi kullanılarak metodun overload edilmek istediği belirtilebilir. Eğer söz konusu metot @Override ile bildirildiği
-halde override edilmemiş ise bu durumda bir sentaks hatası oluşur.
-- 
+halde override edilmemiş ise bu durumda bir sentaks hatası oluşur. 
+- Spring Boot Framework'ü içerisinde de çok sayıda farklı bildirim mevcuttur.
+
 
