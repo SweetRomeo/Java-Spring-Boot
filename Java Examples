@@ -280,7 +280,9 @@ Anonymous Class
 - 
 
 interfaces
-- interfaceler içerisinde access modifier bulunmaz. 
+- interfaceler içerisinde access modifier bulunmaz. public harici herhangi bir 
+access modifier yazmak sentaks hatasına neden olur. public yazmak da gereksizdir.
+elzem olan default olarak bırakmaktır.
 - interfacelerdeki bütün veri elemanları default olarak abstract ve publictir.
 - interfaceler içerisinde metotlar sadece bildirilir ancak tanımlanmaz.
 - interfaceler sınıflara bağlanırken implements anahtar sözcüğü kullanılır.
