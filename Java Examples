@@ -294,4 +294,5 @@ ikinci elemana 2 verildiyse 3.elemanın değeri 3 olur.
 - enumlar birer sabittir bu yüzden if ve switch gibi kontrol deyimlerinde kullanılabilirler.
 - enum türlerinden değişken oluşturuluo bu enumların hem değerleri hem de yazı olarak basılmaları mümkündür.
 - ordinal metodu kullanılarak enumların değerleri basılabilir.
+- enum sınıfının values metodu ile her elemanı o sınıf türünden olan bir dizi oluşturulur.
 
