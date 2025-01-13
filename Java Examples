@@ -295,4 +295,12 @@ ikinci elemana 2 verildiyse 3.elemanın değeri 3 olur.
 - enum türlerinden değişken oluşturuluo bu enumların hem değerleri hem de yazı olarak basılmaları mümkündür.
 - ordinal metodu kullanılarak enumların değerleri basılabilir.
 - enum sınıfının values metodu ile her elemanı o sınıf türünden olan bir dizi oluşturulur.
+- enumlar aslında java.lang paketi içerisinde bulunan Enum sınıfından kalıtım yoluyla elde edilmiş sınıflardır. 
+Bu sebeple toString, ordinal gibi metotlar herhangi bir enum içerisinde yazılmasalar bile Enum class'tan miras almış
+olduğu metotları şüphesiz ki kullanabilir.
+
+Annotation
+- @Override bildirimi kullanılarak metodun overload edilmek istediği belirtilebilir. Eğer söz konusu metot @Override ile bildirildiği
+halde override edilmemiş ise bu durumda bir sentaks hatası oluşur.
+- 
 
