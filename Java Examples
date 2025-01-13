@@ -286,7 +286,13 @@ elzem olan default olarak bırakmaktır.
 - interfacelerdeki bütün veri elemanları default olarak abstract ve publictir.
 - interfaceler içerisinde metotlar sadece bildirilir ancak tanımlanmaz.
 - interfaceler sınıflara bağlanırken implements anahtar sözcüğü kullanılır.
-"
+- interfaceler 3 e ayrılır. Bunlar:
+    - Normal
+        2 veya daha fazla metot var ise buna normal intergace denir.
+    - Functional/SAM(Single Abstract Method)
+        interface eğer sadece tek bir metot içeriyorsa buna Functional interface adı verilir.
+    - Mancer
+        Boş interfaceler mancer interface olarak isimlendirilir.
 
 Enums
 - enum ismi numaralandırma yani enumaration isminden gelmektedir.
