@@ -3,3 +3,40 @@ spring.datasource.url=jdbc:postgresql://localhost:5432
 spring.datasource.username=<kullanıcı adı>
 spring.datasource.password=<şifre>
 spring.datasource.driver-class-name=org.postgresql.Driver
+
+@Aspect
+@Component
+@Slf4j
+@RequiredArgsConstructor
+@ExcludeFromGeneratedCoverage
+public class MessageTraceableAspect {
+
+    private final CacheService cacheService;
+
+    @Before(
+            value = "@annotation(com.yildiztech.georadar.annotation.MessageTraceable) && args(topic,partition,offset,"
+                    + "groupId,event)",
+            argNames = "topic,partition,offset,groupId,event")
+    public void trace(String topic, String partition, String offset, String groupId, BaseEvent event) {
+
+        var id = StringUtils.join(event.getId(), HYPHEN, groupId);
+        var message = ObjectMapperUtil.toJson(event);
+        log.info("Receive starting message {} with keys {}, partition {}, offset {} and groupId {}", message, id, partition,
+                offset, groupId);
+
+        var brokerMessage = cacheService.findById(id);
+        if (brokerMessage != null) {
+            log.warn("Message has already been processed. Message: {} Key: {} ", message, id);
+            throw new TraceableException(
+                    String.format("Message has already been processed. Message: %s Key: %s", message, id));
+        }
+        saveBrokerMessage(id);
+    }
+
+    private void saveBrokerMessage(String id) {
+        var newBrokerMessage = new BrokerMessage();
+        newBrokerMessage.setId(id);
+        newBrokerMessage.setRetryCount(ZERO);
+        cacheService.saveBrokerMessage(newBrokerMessage);
+    }
+}
