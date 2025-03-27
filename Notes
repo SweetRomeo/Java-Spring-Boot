@@ -6,3 +6,6 @@ Spring Bootta bazı önemli @ bildirimleri:
 @Scope("singleton") -> Bildirilen sınıfa eklenilen SQL Querylerin birbirine override etmesini sağlar su sebeple veri tabanında her zaman bir ve yalnız bir veri olur. Son eklenilen veri son durumda
 görünür. Sınıflar default olarak bu bildirime sahiptir. Ancak default olarak böyle olması üretimde daha çok singleton şeklinde kullanıldığı anlamını taşımaz.
 @Scope("prototype") -> Bildirilen sınıfa eklenilen SQL Queryler override edilmez onun yerine teker teker eklenirler. Üretimde sıkça kullanılan bir bildirimdir.
+@Entity ->
+@Repository
+@Id -> Ana sınıfa ait olan primary keyi belirlemek için kullanılır. Primary Key olması istenen veri elemanının bildiriminden hemen önce yazılır.
